@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * initVars - initialize variables
@@ -7,8 +7,6 @@
  */
 void initVars(void)
 {
-	Data vars;
-
 	vars.buffer = NULL;
 	vars.buf_size = 0;
 	vars.line_number = 1;
@@ -32,8 +30,6 @@ void initVars(void)
  */
 void _free(void)
 {
-	Data vars;
-
 	if (vars.buffer)
 		free(vars.buffer);
 	if (vars.stack)

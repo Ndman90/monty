@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * exec_op - call function of the opcode
@@ -8,7 +8,6 @@
  */
 int exec_op(char *opcode)
 {
-	Data vars;
 	int i;
 
 	if (opcode[0] == '#')
@@ -34,7 +33,6 @@ int exec_op(char *opcode)
  */
 void stack(stack_t **stack, unsigned int line_number)
 {
-	Data vars;
 	(void) line_number;
 	(void) stack;
 
@@ -49,7 +47,6 @@ void stack(stack_t **stack, unsigned int line_number)
  */
 void queue(stack_t **stack, unsigned int line_number)
 {
-	Data vars;
 	(void) line_number;
 	(void) stack;
 

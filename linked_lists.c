@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * add_node -  add element to stack.
@@ -9,7 +9,6 @@
  */
 void add_node(stack_t **head, const int n)
 {
-	Data vars;
 	stack_t *new_node;
 
 	new_node = malloc(sizeof(stack_t));
@@ -38,7 +37,6 @@ void add_node(stack_t **head, const int n)
  */
 void add_node_end(stack_t **head, const int n)
 {
-	Data vars;
 	stack_t *new_node, *tmp;
 
 	new_node = malloc(sizeof(stack_t));

@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * main - Monty main program
@@ -9,9 +9,7 @@
  */
 int main(int argc, char **argv)
 {
-	Data vars;
 	char *opcode;
-	ssize_t nread;
 
 	if (argc != 2)
 	{
@@ -25,7 +23,7 @@ int main(int argc, char **argv)
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	while ((nread = getline(&vars.buffer, &vars.buf_size, vars.file_s)) != -1)
+	while (getline(&vars.buffer, &vars.buf_size, vars.file_s) != -1)
 	{
 		opcode = strtok(vars.buffer, " \t\n");
 		if (!opcode)

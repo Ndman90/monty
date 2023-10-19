@@ -1,4 +1,4 @@
-#include "main.h"
+#include "monty.h"
 
 /**
  * push - pushes an element to the stack
@@ -9,7 +9,6 @@
  */
 void push(stack_t **stack, unsigned int line_number)
 {
-	Data vars;
 	char *num;
 
 	num = strtok(NULL, " \t\n");
@@ -34,7 +33,6 @@ void push(stack_t **stack, unsigned int line_number)
  */
 void pall(stack_t **stack, unsigned int line_number)
 {
-	Data vars;
 	stack_t *ptr = *stack;
 	(void) line_number;
 
@@ -53,8 +51,6 @@ void pall(stack_t **stack, unsigned int line_number)
  */
 void pint(stack_t **stack, unsigned int line_number)
 {
-	Data vars;
-
 	if (!*stack)
 	{
 		fprintf(stderr, "L%u: can't pint, stack empty\n", line_number);
@@ -73,8 +69,6 @@ void pint(stack_t **stack, unsigned int line_number)
  */
 void pop(stack_t **stack, unsigned int line_number)
 {
-	Data vars;
-
 	if (!*stack)
 	{
 		fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
@@ -102,7 +96,6 @@ void pop(stack_t **stack, unsigned int line_number)
  */
 void swap(stack_t **stack, unsigned int line_number)
 {
-	Data vars;
 	int tmp;
 
 	if (!(*stack) || !(*stack)->next)
