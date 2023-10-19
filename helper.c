@@ -26,6 +26,28 @@ void initVars(void)
 		vars.instruct[5].f = add;
 	vars.instruct[6].opcode = "nop",
 		vars.instruct[6].f = nop;
+	vars.instruct[7].opcode = "sub",
+		vars.instruct[7].f = sub;
+	vars.instruct[8].opcode = "div",
+		vars.instruct[8].f = divid;
+	vars.instruct[9].opcode = "mul",
+		vars.instruct[9].f = mul;
+	vars.instruct[10].opcode = "mod",
+		vars.instruct[10].f = mod;
+	vars.instruct[11].opcode = "pchar",
+		vars.instruct[11].f = pchar;
+	vars.instruct[12].opcode = "pstr",
+		vars.instruct[12].f = pstr;
+	vars.instruct[13].opcode = "rotl",
+		vars.instruct[13].f = rotl;
+	vars.instruct[14].opcode = "rotr",
+		vars.instruct[14].f = rotr;
+	vars.instruct[15].opcode = "stack",
+		vars.instruct[15].f = stack;
+	vars.instruct[16].opcode = "queue",
+		vars.instruct[16].f = queue;
+	vars.instruct[17].opcode = NULL,
+		vars.instruct[17].f = NULL;
 }
 /**
  * _free - free allocated memory
