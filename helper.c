@@ -7,6 +7,8 @@
  */
 void initVars(void)
 {
+	Data vars;
+
 	vars.buffer = NULL;
 	vars.buf_size = 0;
 	vars.line_number = 1;
@@ -22,10 +24,6 @@ void initVars(void)
 		vars.instruct[3].f = pop;
 	vars.instruct[4].opcode = "swap",
 		vars.instruct[4].f = swap;
-	/*vars.instruct[5].opcode = "add",
-		vars.instruct[5].f = add;
-	vars.instruct[6].opcode = "nop",
-		vars.instruct[6].f = nop;*/
 }
 /**
  * _free - free allocated memory
@@ -34,6 +32,8 @@ void initVars(void)
  */
 void _free(void)
 {
+	Data vars;
+
 	if (vars.buffer)
 		free(vars.buffer);
 	if (vars.stack)
@@ -55,7 +55,7 @@ void _free(void)
 int is_digit(char *str)
 {
 	int i;
-	
+
 	for (i = 0; str[i]; i++)
 	{
 		if (i == 0 && str[i] == '-' && str[i + 1])

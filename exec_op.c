@@ -8,8 +8,9 @@
  */
 int exec_op(char *opcode)
 {
+	Data vars;
 	int i;
-	
+
 	if (opcode[0] == '#')
 		return (EXIT_SUCCESS);
 	for (i = 0; vars.instruct[i].opcode; i++)
@@ -33,11 +34,12 @@ int exec_op(char *opcode)
  */
 void stack(stack_t **stack, unsigned int line_number)
 {
+	Data vars;
 	(void) line_number;
 	(void) stack;
-	
+
 	vars.format = "LIFO";
- }
+}
 /**
  * queue - sets the format of the data to a queue (FIFO).
  * @stack: the head of the stack
@@ -47,8 +49,9 @@ void stack(stack_t **stack, unsigned int line_number)
  */
 void queue(stack_t **stack, unsigned int line_number)
 {
+	Data vars;
 	(void) line_number;
 	(void) stack;
-	
+
 	vars.format = "FIFO";
 }

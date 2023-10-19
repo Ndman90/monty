@@ -1,5 +1,4 @@
 #include "main.h"
-Data vars;
 
 /**
  * main - Monty main program
@@ -10,6 +9,7 @@ Data vars;
  */
 int main(int argc, char **argv)
 {
+	Data vars;
 	char *opcode;
 	ssize_t nread;
 

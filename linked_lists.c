@@ -9,8 +9,9 @@
  */
 void add_node(stack_t **head, const int n)
 {
+	Data vars;
 	stack_t *new_node;
-	
+
 	new_node = malloc(sizeof(stack_t));
 	if (!new_node)
 	{
@@ -21,14 +22,13 @@ void add_node(stack_t **head, const int n)
 	new_node->n = n;
 	new_node->next = NULL;
 	new_node->prev = NULL;
-	
 	new_node->next = *head;
 	if (*head)
 	{
 		(*head)->prev = new_node;
 	}
 	*head = new_node;
- }
+}
 /**
  * add_node_end -  add element to queue.
  * @head: the front of the queue
@@ -38,8 +38,9 @@ void add_node(stack_t **head, const int n)
  */
 void add_node_end(stack_t **head, const int n)
 {
+	Data vars;
 	stack_t *new_node, *tmp;
-	
+
 	new_node = malloc(sizeof(stack_t));
 	if (!new_node)
 	{
