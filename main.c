@@ -1,4 +1,5 @@
 #include "monty.h"
+Data vars;
 
 /**
  * main - Monty main program
