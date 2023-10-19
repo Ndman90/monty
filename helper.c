@@ -22,6 +22,10 @@ void initVars(void)
 		vars.instruct[3].f = pop;
 	vars.instruct[4].opcode = "swap",
 		vars.instruct[4].f = swap;
+	vars.instruct[5].opcode = "add",
+		vars.instruct[5].f = add;
+	vars.instruct[6].opcode = "nop",
+		vars.instruct[6].f = nop;
 }
 /**
  * _free - free allocated memory
