@@ -8,7 +8,8 @@
  *
  * Return: (void)
  */
-void mod(stack_t **stack, unsigned int line_number){
+void mod(stack_t **stack, unsigned int line_number)
+{
 	if (!(*stack) || !(*stack)->next || (*stack)->n == 0)
 	{
 		if (*stack && (*stack)->next)
@@ -58,7 +59,7 @@ void pstr(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp = *stack;
 	(void) line_number;
-	
+
 	while (tmp != NULL)
 	{
 		if (tmp->n <= 0 || tmp->n > 127)
@@ -83,7 +84,7 @@ void rotl(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp = *stack;
 	(void) line_number;
-	
+
 	if (*stack && (*stack)->next)
 	{
 		while (tmp->next)
@@ -107,7 +108,7 @@ void rotr(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp = *stack;
 	(void) line_number;
-	
+
 	if (*stack && (*stack)->next)
 	{
 		while (tmp->next)
