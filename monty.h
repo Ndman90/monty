@@ -88,11 +88,11 @@ int is_digit(char *str);
 void _free(void);
 void add_node(stack_t **head, const int n);
 void add_node_end(stack_t **head, const int n);
+
+/* op_functions2 */
 void sub(stack_t **stack, unsigned int line_number);
 void divid(stack_t **stack, unsigned int line_number);
 void mul(stack_t **stack, unsigned int line_number);
-
-/* 2-opcodes.c*/
 void mod(stack_t **stack, unsigned int line_number);
 void pchar(stack_t **stack, unsigned int line_number);
 void pstr(stack_t **stack, unsigned int line_number);
